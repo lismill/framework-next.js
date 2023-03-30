@@ -110,7 +110,7 @@ export default function FrameworkHeader() {
                     )}
                   >
                     <li>
-                      <Link href="/develop">{item}</Link>
+                      <a>{item}</a>
                     </li>
                   </Trigger>
                 );
