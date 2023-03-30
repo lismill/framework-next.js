@@ -4,19 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 9000",
-    "build": "next build",
+    "build": "next build & next export",
     "start": "next start",
     "lint": "next lint",
     "precommit": "lint-staged",
     "prepare": "husky install"
   },
   "dependencies": {
-    "@nextui-org/react": "^1.0.0-beta.12",
+    "@arco-design/web-react": "^2.46.1",
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
-    "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.3",
     "eslint": "8.37.0",
     "eslint-config-next": "13.2.4",
     "next": "13.2.4",

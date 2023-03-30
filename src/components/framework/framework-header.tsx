@@ -1,65 +1,118 @@
+import {Trigger} from "@arco-design/web-react";
+import Image from "next/image";
+import Link from "next/link";
+import logo from "../../../public/images/common/logo.png";
+
 export default function FrameworkHeader() {
   return (
     <div className="framework-header">
-      <div className="w-1440">
-        {/* header */}
-        <div className="flex justify-between ">
-          <div className="flex">
-            <div className="logo">logo</div>
-            <div className="ml-[32px] flex items-center search">
-              <input type="search" className="w-[390px] h-[42px] form-control border-2" placeholder="Search game..." />
-            </div>
-            <div className="cart ml-[32px] relative">
-              <i
-                title="cart"
-                className="bi bi-cart-fill text-[22px] text-[#666666] hover:text-[#c32200] cursor-pointer"
-              ></i>
-              <div className="total absolute top-[20px] right-[-8px] w-[16px] h-[16px] rounded-full bg-[#c32200] leading-[16px] text-center text-[#ffffff] text-[12px]">
-                8
-              </div>
-            </div>
+      {/* header */}
+      <div className="w-[1280px] mx-auto flex justify-between items-center header">
+        <div className="flex">
+          <div className="logo flex">
+            <Image src={logo} alt="logo" width={160}></Image>
           </div>
-          <div className="info flex">
-            <div className="icon flex items-center">
-              <div>
-                <i
+          <div className="ml-[64px] flex items-center search relative">
+            <Trigger
+              position="bl"
+              popupAlign={{bottom: 26}}
+              popup={() => (
+                <div className="w-[290px] h-[360px] text-center bg-[#1a1a1c] p-[24px] text-[#ffffff]">currency</div>
+              )}
+            >
+              <input
+                placeholder="Search Game"
+                className="pl-[46px] pr-[16px] w-[390px] h-[46px] text-[#ffffff] text-[16px] bg-[#2e2e2e] rounded-[23px]"
+                style={{border: "none"}}
+              />
+              <span className="iconfont icon-search absolute top-[10px] left-[16px] text-[16px] cursor-pointer"></span>
+            </Trigger>
+          </div>
+        </div>
+        <div className="info flex items-center">
+          {/* icons */}
+          <div className="icons flex items-center">
+            <div className="flex items-center">
+              <span
+                className="iconfont icon-email ml-[22px] text-[14px] cursor-pointer relative top-[1px]"
+                title="login/register"
+              ></span>
+            </div>
+            <div className="flex items-center">
+              <span
+                className="iconfont icon-discoard ml-[22px] text-[17px] cursor-pointer"
+                title="login/register"
+              ></span>
+            </div>
+            <div className="flex items-center">
+              <Trigger
+                position="bottom"
+                popupAlign={{bottom: 26}}
+                popup={() => (
+                  <div className="w-[140px] h-[360px] text-center bg-[#1a1a1c] p-[24px] text-[#ffffff]">currency</div>
+                )}
+              >
+                <span
+                  className="iconfont icon-meiyuan ml-[22px] text-[20px] cursor-pointer"
                   title="login/register"
-                  className={`bi bi-person-circle ml-[16px] text-[20px] text-[#666666] hover:text-[#c32200] cursor-pointer`}
-                ></i>
-              </div>
-              <div>
-                <i
-                  title="discord"
-                  className={`bi bi-discord ml-[16px] text-[20px] text-[#666666] hover:text-[#c32200] cursor-pointer`}
-                ></i>
-              </div>
-              <div>
-                <i
-                  title="email"
-                  className={`bi bi-envelope-fill ml-[16px] text-[20px] text-[#666666] hover:text-[#c32200] cursor-pointer`}
-                ></i>
-              </div>
-              <select className="ml-[16px] w-[100px] form-select">
-                <option value="1" selected>
-                  USD
-                </option>
-                <option value="2">EUR</option>
-                <option value="3">GBP</option>
-                <option value="4">AUD</option>
-                <option value="5">CAD</option>
-                <option value="6">RUB</option>
-              </select>
-              <select className="ml-[16px] w-[100px] form-select">
-                <option value="1" selected>
-                  English
-                </option>
-                <option value="2">Français</option>
-              </select>
+                ></span>
+              </Trigger>
+            </div>
+            <div className="flex items-center">
+              <Trigger
+                position="bottom"
+                popupAlign={{bottom: 26}}
+                popup={() => (
+                  <div className="w-[140px] h-[360px] text-center bg-[#1a1a1c] p-[24px] text-[#ffffff]">language</div>
+                )}
+              >
+                <span
+                  className="iconfont icon-global1 ml-[22px] text-[22px] cursor-pointer relative top-[1px]"
+                  title="login/register"
+                ></span>
+              </Trigger>
+            </div>
+            <div className="flex items-center cursor-pointer hover:text-[#ffffff]">
+              <Trigger
+                position="br"
+                popupAlign={{bottom: 26}}
+                popup={() => (
+                  <div className="w-[360px]  h-[360px] bg-[#1a1a1c] p-[24px] text-[#ffffff]">login/registry</div>
+                )}
+              >
+                <div className="flex items-center">
+                  <span className="iconfont icon-user1 ml-[22px] text-[20px]" title="login/register"></span>
+                  <span className="ml-[6px] text-[13px]">Sign in</span>
+                </div>
+              </Trigger>
             </div>
           </div>
         </div>
-        {/* nav */}
-        <div className="nav">nav</div>
+      </div>
+      {/* nav */}
+      <div className="h-[46px] nav ">
+        <div className="w-[1280px] mx-auto flex items-center justify-between">
+          {/* nav */}
+          <ul>
+            {["Home", "Games", "Help", "Center", "Member", "Reviews", "Contact Us", "About Us"].map((item) => {
+              return (
+                <li key="item">
+                  <Link href={item === "Home" ? "/" : "/develop"}>{item}</Link>
+                </li>
+              );
+            })}
+          </ul>
+          {/* cart */}
+          <div className="cart mr-[12px] relative cursor-pointer">
+            <span
+              title="cart"
+              className="iconfont icon-shopping-cart-fill text-[24px] text-[#666666] hover:text-[#c32200]"
+            ></span>
+            <div className="total absolute top-[3px] right-[-8px] w-[16px] h-[16px] rounded-full bg-[#c32200] leading-[16px] text-center text-[#ffffff] text-[12px]">
+              8
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

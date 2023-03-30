@@ -5,21 +5,63 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 76px;
-    line-height: 76px;
-    background-color: #ffffff;
-    backdrop-filter: saturate(180%) blur(10px);
-    box-shadow: rgba(2, 1, 1, 0.1) 0px 5px 20px -5px;
-    .w-1440 {
-      width: 1280px;
-      margin: 0 auto;
-      .logo {
-        min-width: 230px;
+    color: #cccccc;
+    background-color: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(2, 1, 1, 0.08) 0px 5px 20px -5px;
+    .header {
+      height: 98px;
+      .info {
+        .iconfont {
+          &:hover {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .nav {
+      background-color: rgba(245, 246, 247, 0.9);
+      ul {
+        display: flex;
+        align-items: center;
+        li {
+          position: relative;
+          margin-right: 32px;
+          cursor: pointer;
+          height: 46px;
+          line-height: 46px;
+          padding-right: 32px;
+          font-size: 16px;
+          &:not(&:last-child) {
+            &::after {
+              content: "";
+              width: 1px;
+              height: 16px;
+              position: absolute;
+              right: 0;
+              top: 15px;
+              background-color: #cccccc;
+            }
+          }
+          a {
+            display: block;
+            text-align: center;
+            line-height: 46px;
+            font-weight: 500;
+            transition: all 0.25s;
+            text-decoration: none;
+            color: #343434;
+            transition: all 0.25s;
+            &:hover {
+              color: #c32200;
+            }
+          }
+        }
       }
     }
   }
   .framework-container {
-    margin: 76px auto 0 auto;
+    margin: 144px auto 0 auto;
   }
   .framework-footer {
     padding: 60px 0 0 0;
@@ -42,12 +84,14 @@
       dd {
         line-height: 36px;
         a {
-          padding: 2px 0;
+          padding: 4px 0;
+          border-bottom: 2px solid #1a1a1c;
           &:hover {
+            cursor: pointer;
             transition: all 0.25s;
             color: #ffffff;
             text-decoration: none;
-            border-bottom: 1px solid #c32200;
+            border-bottom: 2px solid #c32200;
           }
         }
       }
