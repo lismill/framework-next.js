@@ -13,14 +13,8 @@
     .w-1440 {
       width: 1280px;
       margin: 0 auto;
-      .search {
-        label {
-          border-radius: 4px;
-        }
-        input {
-          padding: 0 8px;
-          font-size: 15px;
-        }
+      .logo {
+        min-width: 230px;
       }
     }
   }

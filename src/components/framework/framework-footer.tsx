@@ -9,13 +9,10 @@ export default function FrameworkFooter() {
           <p>
             <Image src={logo} alt="logo" />
           </p>
+          <p>Registered Names and Trademarks are the copyright and property of their respective owners.</p>
           <p>
-            Registered Names and Trademarks are the copyright and property of
-            their respective owners.
-          </p>
-          <p>
-            Copyright © 2022-2023,IG GIANTECH LTD with registered address 291
-            BRIGHTON ROAD SOUTH CROYDON UNITED KINGDOM CR2 6EQ.,
+            Copyright © 2022-2023,IG GIANTECH LTD with registered address 291 BRIGHTON ROAD SOUTH CROYDON UNITED KINGDOM
+            CR2 6EQ.,
             <br />
             All Rights Reserved.
           </p>
@@ -59,10 +56,7 @@ export default function FrameworkFooter() {
           </dl>
         </div>
       </div>
-      <div className="notice">
-        Notice : Using illegal leveling and gold service might terminate the
-        account
-      </div>
+      <div className="notice">Notice : Using illegal leveling and gold service might terminate the account</div>
     </div>
   );
 }

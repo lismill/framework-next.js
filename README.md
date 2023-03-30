@@ -23,6 +23,7 @@ This is a `Next.js` project bootstrapped with `create-next-app`
 `tailwind.config.js`
 
 ```js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
   content: [],
@@ -55,6 +56,8 @@ module.exports = {
 
 ```scss
 @tailwind base;
+@tailwind utilities;
+// @tailwind components;
 ```
 
 ### 使用
@@ -63,59 +66,36 @@ module.exports = {
 <div className="mt-[20px] text-[50px]">Hello tailwindcss.</div>
 ```
 
-## NextUI
+## 使用 SVG
 
 ### 安装
 
-`npm install @nextui-org/react --save`
+`npm install --save-dev @svgr/webpack`
 
 ### 配置
 
-`./src/pages/_app.tsx`
+`npm install --save-dev @svgr/webpack`
 
-```tsx
-import "@/styles/globals.scss";
-import type { AppProps } from "next/app";
-import { createTheme, NextUIProvider } from "@nextui-org/react";
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  // webpack
+  webpack(config) {
+    // @svgr/webpack
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
+};
 
-export default function App({ Component, pageProps }: AppProps) {
-  const theme = createTheme({ type: "light" });
-  return (
-    <NextUIProvider theme={theme}>
-      <Component {...pageProps} />
-    </NextUIProvider>
-  );
-}
-```
-
-`./src/pages/_document.tsx`
-
-```tsx
-import { Html, Head, Main, NextScript } from "next/document";
-import { CssBaseline } from "@nextui-org/react";
-
-export default function Document() {
-  return (
-    <Html lang="zh-cn">
-      <Head>{CssBaseline.flush()}</Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  );
-}
+module.exports = nextConfig;
 ```
 
 ### 使用
-
-`*.tsx`
-
-```tsx
-import { Button } from "@nextui-org/react";
-
-<Button>Button</Button>;
-```
 
 ## 约定式路由
 
