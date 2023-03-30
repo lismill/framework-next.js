@@ -14,15 +14,15 @@ export default function FrameworkHeader() {
           </div>
           <div className="ml-[64px] flex items-center search relative">
             <Trigger
+              trigger="click"
               position="bl"
               popupAlign={{bottom: 26}}
-              popup={() => (
-                <div className="w-[290px] h-[360px] text-center bg-[#1a1a1c] p-[24px] text-[#ffffff]">currency</div>
-              )}
+              popup={() => <div className="w-[290px] h-[360px] bg-[#1a1a1c] p-[24px] text-[#ffffff]">currency</div>}
             >
               <input
-                placeholder="Search Game"
                 className="pl-[46px] pr-[16px] w-[390px] h-[46px] text-[#ffffff] text-[16px] bg-[#2e2e2e] rounded-[23px]"
+                placeholder="Search Game"
+                autoComplete="off"
                 style={{border: "none"}}
               />
               <span className="iconfont icon-search absolute top-[10px] left-[16px] text-[16px] cursor-pointer"></span>
@@ -94,12 +94,33 @@ export default function FrameworkHeader() {
         <div className="w-[1280px] mx-auto flex items-center justify-between">
           {/* nav */}
           <ul>
-            {["Home", "Games", "Help", "Center", "Member", "Reviews", "Contact Us", "About Us"].map((item) => {
-              return (
-                <li key="item">
-                  <Link href={item === "Home" ? "/" : "/develop"}>{item}</Link>
-                </li>
-              );
+            {["Home", "Games", "Help Center", "Member", "Reviews", "Contact Us", "About Us"].map((item) => {
+              if (item === "Games") {
+                return (
+                  <Trigger
+                    key="item"
+                    position="bl"
+                    popup={() => (
+                      <div
+                        className="w-[890px] h-[460px] bg-[#dfe0e1] p-[24px]"
+                        style={{boxShadow: "rgba(2, 1, 1, 0.08) 0px 5px 10px -5px"}}
+                      >
+                        currency
+                      </div>
+                    )}
+                  >
+                    <li>
+                      <Link href="/develop">{item}</Link>
+                    </li>
+                  </Trigger>
+                );
+              } else {
+                return (
+                  <li key="item">
+                    <Link href={item === "Home" ? "/" : "/develop"}>{item}</Link>
+                  </li>
+                );
+              }
             })}
           </ul>
           {/* cart */}

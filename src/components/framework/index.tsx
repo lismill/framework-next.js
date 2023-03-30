@@ -2,6 +2,7 @@ import Head from "next/head";
 import FrameworkHeader from "./framework-header";
 import FrameworkFooter from "./framework-footer";
 import React from "react";
+import {BackTop} from "@arco-design/web-react";
 
 // 类型约束
 interface IProps {
@@ -23,6 +24,9 @@ const Framework: React.FC<IProps> = (props) => {
         <FrameworkHeader></FrameworkHeader>
         <div className="framework-container">{props.children}</div>
         <FrameworkFooter></FrameworkFooter>
+        <BackTop visibleHeight={300} className="fixed right-[160px] bottom-[160px]">
+          <span className="iconfont text-[#666666] hover:text-[#444444] icon-up-square text-[43px]"></span>
+        </BackTop>
       </div>
     </>
   );
