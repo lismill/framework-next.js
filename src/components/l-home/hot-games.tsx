@@ -29,6 +29,7 @@ const HomeHotGames: React.FC = () => {
             <div
               key={item.name}
               className="w-[302px] rounded-[6px] bg-white transition cursor-pointer hover:translate-y-[-4px] hover:font-[500] hover:text-[#c32200]"
+              style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 6px 16px"}}
             >
               <Image
                 className="rounded-t-[6px] opacity-[0.9] hover:opacity-[1]"

@@ -9,7 +9,7 @@ const HomeWhyChooseUs: React.FC = () => {
       </h3>
       <div
         className="p-[24px] bg-white rounded-[6px] flex justify-between flex-wrap"
-        style={{boxShadow: "rgba(2, 1, 1, 0.08) 0px 5px 10px -5px"}}
+        style={{boxShadow: "rgba(0, 0, 0, 0.06) 0px 6px 16px"}}
       >
         {[
           {
