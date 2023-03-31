@@ -26,7 +26,7 @@ export default function FrameworkHeader() {
                 autoComplete="off"
                 style={{border: "none"}}
               />
-              <span className="iconfont icon-search absolute top-[8px] left-[16px] text-[16px] cursor-pointer"></span>
+              <span className="iconfont icon-search absolute top-[6px] left-[16px] text-[16px] cursor-pointer"></span>
             </Trigger>
           </div>
         </div>
