@@ -12,15 +12,19 @@ const LHome: React.FC = () => {
       <LContent top="banner">
         <HomeHotGames />
         <HomeWhyChooseMe />
-        <h3 className="title">
-          <div>Game News</div>
-        </h3>
-        <h3 className="title">
-          <div>
-            Community ratings <p className="desc">More than 1,000,000 customer reviews on Z2U</p>
-          </div>
-        </h3>
-        <div className="pb-[64px] flex justify-between">
+        <div className="w-[1280px] m-auto">
+          <h3 className="title">
+            <div>Game News</div>
+          </h3>
+        </div>
+        <div className="w-[1280px] m-auto">
+          <h3 className="title">
+            <div>
+              Community ratings <p className="desc">More than 1,000,000 customer reviews on Z2U</p>
+            </div>
+          </h3>
+        </div>
+        <div className="w-[1280px] m-auto pb-[64px] flex justify-between">
           <HomeCompanyIntroduction />
           <HomeMethodOfPayment />
         </div>

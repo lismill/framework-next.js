@@ -38,7 +38,7 @@ const LContent: React.FC<{
           </Breadcrumb>
         </div>
       )}
-      <div className="w-[1280px] mx-auto">{children}</div>
+      <div className="mx-auto">{children}</div>
     </div>
   );
 };
