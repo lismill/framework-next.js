@@ -1,4 +1,4 @@
-import {Button, Space, Tag} from "@arco-design/web-react";
+import {Space, Tag} from "@arco-design/web-react";
 import Image from "next/image";
 import Game1 from "../../../public/images/home/1.jpg";
 import Game2 from "../../../public/images/home/2.jpg";
@@ -14,9 +14,9 @@ const HomeHotGames: React.FC = () => {
           Hot Games
           <p className="desc">The best starting point to discover hot games Want to play Hot Games?</p>
         </div>
-        <p className="more">
+        <div className="more">
           <Tag color="#c32200">SEE ALL</Tag>
-        </p>
+        </div>
       </h3>
       <Space size={24} className="flex-wrap">
         {[

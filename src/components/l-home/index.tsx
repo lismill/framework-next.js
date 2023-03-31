@@ -3,6 +3,8 @@ import LContent from "../../components/l-content";
 import React from "react";
 import HomeHotGames from "./hot-games";
 import HomeWhyChooseMe from "./why-choose-us";
+import HomeCompanyIntroduction from "./company-introduction";
+import HomeMethodOfPayment from "./method-of-payment";
 
 const LHome: React.FC = () => {
   return (
@@ -18,12 +20,10 @@ const LHome: React.FC = () => {
             Community ratings <p className="desc">More than 1,000,000 customer reviews on Z2U</p>
           </div>
         </h3>
-        <h3 className="title">
-          <div>Company INTRODUCTION</div>
-        </h3>
-        <h3 className="title">
-          <div>Method Of Payment</div>
-        </h3>
+        <div className="pb-[64px] flex justify-between">
+          <HomeCompanyIntroduction />
+          <HomeMethodOfPayment />
+        </div>
       </LContent>
     </Framework>
   );

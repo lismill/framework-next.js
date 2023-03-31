@@ -39,8 +39,8 @@ const HomeWhyChooseUs: React.FC = () => {
                 <span className={`text-[62px] text-[#c32200] iconfont ${item.icon}`}></span>
               </dt>
               <dd>
-                <p className="name text-[24px] font-family-title">{item.name}</p>
-                <p className="desc font-family-title text-[#8a8a8a]">{item.desc}</p>
+                <p className="name text-[24px]">{item.name}</p>
+                <p className="desc text-[#8a8a8a]">{item.desc}</p>
               </dd>
             </dl>
           );
