@@ -4,6 +4,10 @@ import Game1 from "../../../public/images/home/1.jpg";
 import Game2 from "../../../public/images/home/2.jpg";
 import Game3 from "../../../public/images/home/3.jpg";
 import Game4 from "../../../public/images/home/4.jpg";
+import Game5 from "../../../public/images/home/5.jpg";
+import Game6 from "../../../public/images/home/6.jpg";
+import Game7 from "../../../public/images/home/7.jpg";
+import Game8 from "../../../public/images/home/8.jpg";
 import React from "react";
 
 const HomeHotGames: React.FC = () => {
@@ -18,12 +22,16 @@ const HomeHotGames: React.FC = () => {
           <Tag color="#c32200">SEE ALL</Tag>
         </div>
       </h3>
-      <Space size={24} className="flex-wrap">
+      <div className="flex flex-wrap gap-[24px]">
         {[
           {name: "Dofus", image: Game1},
           {name: "The Elder Scroll Online", image: Game2},
           {name: "World of Warcraft", image: Game3},
           {name: "WoW WotLK", image: Game4},
+          {name: "Lost Ark", image: Game5},
+          {name: "Old School RuneScape", image: Game6},
+          {name: "RuneScape 3", image: Game7},
+          {name: "Path of Exile", image: Game8},
         ].map((item) => {
           return (
             <div
@@ -41,7 +49,7 @@ const HomeHotGames: React.FC = () => {
             </div>
           );
         })}
-      </Space>
+      </div>
     </div>
   );
 };
