@@ -10,7 +10,8 @@ export default function FrameworkHeader() {
       <div className="w-[1280px] mx-auto flex justify-between items-center header">
         <div className="flex">
           <div className="logo flex">
-            <Image src={logo} alt="logo" width={160}></Image>
+            logo
+            {/* <Image src={logo} alt="logo" width={160}></Image> */}
           </div>
           <div className="ml-[64px] flex items-center search relative">
             <Trigger
@@ -20,12 +21,12 @@ export default function FrameworkHeader() {
               popup={() => <div className="w-[290px] h-[360px] bg-[#1a1a1c] p-[24px] text-[#ffffff]">currency</div>}
             >
               <input
-                className="pl-[46px] pr-[16px] w-[390px] h-[46px] text-[#ffffff] text-[16px] bg-[#2e2e2e] rounded-[23px]"
+                className="pl-[40px] pr-[16px] w-[390px] h-[40px] text-[#ffffff] text-[16px] bg-[#2e2e2e] rounded-[20px]"
                 placeholder="Search Game"
                 autoComplete="off"
                 style={{border: "none"}}
               />
-              <span className="iconfont icon-search absolute top-[10px] left-[16px] text-[16px] cursor-pointer"></span>
+              <span className="iconfont icon-search absolute top-[8px] left-[16px] text-[16px] cursor-pointer"></span>
             </Trigger>
           </div>
         </div>
@@ -105,7 +106,7 @@ export default function FrameworkHeader() {
                         className="w-[890px] h-[460px] bg-[#dfe0e1] p-[24px]"
                         style={{boxShadow: "rgba(2, 1, 1, 0.08) 0px 5px 10px -5px"}}
                       >
-                        currency
+                        Games
                       </div>
                     )}
                   >
@@ -116,7 +117,7 @@ export default function FrameworkHeader() {
                 );
               } else {
                 return (
-                  <li key="item">
+                  <li key={item}>
                     <Link href={item === "Home" ? "/" : "/develop"}>{item}</Link>
                   </li>
                 );

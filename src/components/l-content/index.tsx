@@ -1,18 +1,43 @@
-import {Carousel} from "@arco-design/web-react";
+import {Breadcrumb, Carousel} from "@arco-design/web-react";
+import {IconRight} from "@arco-design/web-react/icon";
+const BreadcrumbItem = Breadcrumb.Item;
+import Image from "next/image";
+import banner from "../../../public/images/banner/0.png";
+import banner1 from "../../../public/images/banner/0.png";
+import banner2 from "../../../public/images/banner/0.png";
+import styles from "./index.module.scss";
 
 const LContent: React.FC<{
-  top?: "swiper" | "banner" | undefined;
+  top?: "banner" | "breadcrumb";
+  breadcrumb?: string;
   children: any;
-}> = ({top, children}) => {
+}> = ({top, breadcrumb, children}) => {
   return (
     <div className="l-content">
-      {top === "swiper" && (
-        <Carousel autoPlay={true} style={{height: 460}}>
-          <div>111</div>
-          <div>222</div>
+      {top === "banner" && (
+        <Carousel
+          autoPlay={true}
+          indicatorType="line"
+          showArrow="hover"
+          arrowClassName={styles.arrow}
+          indicatorClassName={styles.indicator}
+          style={{height: 457}}
+        >
+          <div>{/* <Image src={banner1} alt=""></Image> */}</div>
+          <div>{/* <Image src={banner2} alt=""></Image> */}</div>
         </Carousel>
       )}
-      {top === "banner" && <div className="bg-gray-200 h-[260px]">banner</div>}
+      {top === "breadcrumb" && (
+        <div className="w-[1280px] m-auto py-[16px] breadcrumb">
+          <Breadcrumb separator={<IconRight />}>
+            <BreadcrumbItem>
+              <span className="iconfont icon-home text-[17px] relative left-[-4px]"></span>
+              <span>Home</span>
+            </BreadcrumbItem>
+            <BreadcrumbItem>{breadcrumb}</BreadcrumbItem>
+          </Breadcrumb>
+        </div>
+      )}
       <div className="w-[1280px] mx-auto">{children}</div>
     </div>
   );
