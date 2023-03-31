@@ -6,8 +6,9 @@ export default function FrameworkFooter() {
     <div className="framework-footer">
       <div className="w-[1280px] mx-auto flex justify-between">
         <div className="logo">
-          <p>
-            <Image src={logo} alt="logo" />
+          <p className="h-[60px]">
+            Logo
+            {/* <Image src={logo} alt="logo" /> */}
           </p>
           <p>Registered Names and Trademarks are the copyright and property of their respective owners.</p>
           <p>
