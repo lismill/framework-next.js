@@ -48,28 +48,36 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
   line-height: 1;
+  font-weight: normal;
+}
+.font-family-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 h3.title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 24px 0;
-  font-size: 22px;
+  margin: 48px 0 32px 0;
+  font-size: 24px;
   font-weight: 600;
-  p.subTitle,
+  letter-spacing: -1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  p.desc,
   p.more {
     margin-top: 12px;
     font-weight: normal;
     font-size: 15px;
     color: #8a8a8a;
+    letter-spacing: 0px;
   }
   p.more {
     margin-top: 0px;
     cursor: pointer;
     transition: all 0.25s;
+    opacity: 0.85;
     &:hover {
+      opacity: 1;
       font-weight: 600;
       color: #c32200;
     }

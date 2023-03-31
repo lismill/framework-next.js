@@ -16,6 +16,10 @@ const Framework: React.FC<IProps> = (props) => {
     <>
       <Head>
         <title>{props?.title}</title>
+        <meta
+          name="keywords"
+          content="POE Currency, OSRS Gold, Escape From Tarkov Items, Madden Overdrive Coins, FFXIV Gil, Maplestory M Mesos, Steam Level Boost"
+        />
         <meta name="description" content={props?.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
