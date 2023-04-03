@@ -5,6 +5,8 @@ import HomeHotGames from "./hot-games";
 import HomeWhyChooseMe from "./why-choose-us";
 import HomeCompanyIntroduction from "./company-introduction";
 import HomeMethodOfPayment from "./method-of-payment";
+import HomeGamesNews from "./game-news";
+import HomeCommunityRatings from "./community-ratings";
 
 const LHome: React.FC = () => {
   return (
@@ -12,18 +14,8 @@ const LHome: React.FC = () => {
       <LContent top="banner">
         <HomeHotGames />
         <HomeWhyChooseMe />
-        <div className="w-[1280px] m-auto">
-          <h3 className="title">
-            <div>Game News</div>
-          </h3>
-        </div>
-        <div className="w-[1280px] m-auto">
-          <h3 className="title">
-            <div>
-              Community ratings <p className="desc">More than 1,000,000 customer reviews on Z2U</p>
-            </div>
-          </h3>
-        </div>
+        <HomeGamesNews />
+        <HomeCommunityRatings />
         <div className="w-[1280px] m-auto pb-[64px] flex justify-between">
           <HomeCompanyIntroduction />
           <HomeMethodOfPayment />

@@ -32,7 +32,7 @@ const HomeWhyChooseUs: React.FC = () => {
             },
           ].map((item) => {
             return (
-              <dl key={item.name} className="my-[24px] w-[580px] flex items-center">
+              <dl key={item.name} className="mt-[12px] mb-[24px] w-[580px] flex items-center">
                 <dt className="mr-[32px]">
                   <span className={`text-[62px] text-[#c32200] iconfont ${item.icon}`}></span>
                 </dt>
