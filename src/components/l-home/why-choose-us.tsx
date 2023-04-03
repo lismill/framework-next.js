@@ -5,10 +5,10 @@ const HomeWhyChooseUs: React.FC = () => {
   return (
     <div className="why-choose-us bg-white">
       <div className="w-[1280px] m-auto">
-        <h3 className="title pt-[32px]">
+        <h3 className="title pt-[48px]">
           <div>Why Choose Us</div>
         </h3>
-        <div className="p-[24px]  rounded-[6px] flex justify-between flex-wrap">
+        <div className="pb-[24px] rounded-[6px] flex justify-between flex-wrap">
           {[
             {
               name: "99% Satisfaction",
@@ -32,7 +32,7 @@ const HomeWhyChooseUs: React.FC = () => {
             },
           ].map((item) => {
             return (
-              <dl key={item.name} className="my-[24px] pl-[32px] w-[580px] flex items-center">
+              <dl key={item.name} className="my-[24px] w-[580px] flex items-center">
                 <dt className="mr-[32px]">
                   <span className={`text-[62px] text-[#c32200] iconfont ${item.icon}`}></span>
                 </dt>

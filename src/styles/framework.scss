@@ -17,6 +17,15 @@
             color: #ffffff;
           }
         }
+        .arco-select .arco-select-view {
+          text-align: right;
+          color: #cccccc;
+          position: relative;
+          top: 2px;
+          &:hover {
+            color: #ffffff;
+          }
+        }
       }
     }
     .nav {

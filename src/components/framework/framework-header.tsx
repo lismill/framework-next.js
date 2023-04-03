@@ -1,4 +1,5 @@
-import {Trigger} from "@arco-design/web-react";
+import {Select, Trigger} from "@arco-design/web-react";
+const Option = Select.Option;
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/images/common/logo.png";
@@ -33,46 +34,6 @@ export default function FrameworkHeader() {
         <div className="info flex items-center">
           {/* icons */}
           <div className="icons flex items-center">
-            <div className="flex items-center">
-              <span
-                className="iconfont icon-email ml-[22px] text-[14px] cursor-pointer relative top-[1px]"
-                title="login/register"
-              ></span>
-            </div>
-            <div className="flex items-center">
-              <span
-                className="iconfont icon-discoard ml-[22px] text-[17px] cursor-pointer"
-                title="login/register"
-              ></span>
-            </div>
-            <div className="flex items-center">
-              <Trigger
-                position="bottom"
-                popupAlign={{bottom: 26}}
-                popup={() => (
-                  <div className="w-[140px] h-[360px] text-center bg-[#1a1a1c] p-[24px] text-[#ffffff]">currency</div>
-                )}
-              >
-                <span
-                  className="iconfont icon-meiyuan ml-[22px] text-[20px] cursor-pointer"
-                  title="login/register"
-                ></span>
-              </Trigger>
-            </div>
-            <div className="flex items-center">
-              <Trigger
-                position="bottom"
-                popupAlign={{bottom: 26}}
-                popup={() => (
-                  <div className="w-[140px] h-[360px] text-center bg-[#1a1a1c] p-[24px] text-[#ffffff]">language</div>
-                )}
-              >
-                <span
-                  className="iconfont icon-global1 ml-[22px] text-[22px] cursor-pointer relative top-[1px]"
-                  title="login/register"
-                ></span>
-              </Trigger>
-            </div>
             <div className="flex items-center cursor-pointer hover:text-[#ffffff]">
               <Trigger
                 position="br"
@@ -86,6 +47,34 @@ export default function FrameworkHeader() {
                   <span className="ml-[6px] text-[13px]">Sign in</span>
                 </div>
               </Trigger>
+            </div>
+            <div className="flex items-center">
+              <span
+                className="iconfont icon-email ml-[22px] text-[14px] cursor-pointer relative top-[1px]"
+                title="login/register"
+              ></span>
+            </div>
+            <div className="flex items-center">
+              <span
+                className="iconfont icon-discoard ml-[22px] text-[17px] cursor-pointer"
+                title="login/register"
+              ></span>
+            </div>
+            <div className="ml-[32px]">
+              <Select trigger="hover" bordered={false} defaultValue="1" style={{width: "76px"}}>
+                <Option value="1">USD</Option>
+                <Option value="2">EUR</Option>
+                <Option value="3">GBP</Option>
+                <Option value="4">AUD</Option>
+                <Option value="5">CAD</Option>
+                <Option value="6">RUB</Option>
+              </Select>
+            </div>
+            <div className="relative mr-[-12px]">
+              <Select trigger="hover" bordered={false} defaultValue="1" style={{width: "90px"}}>
+                <Option value="1">English</Option>
+                <Option value="2">Français</Option>
+              </Select>
             </div>
           </div>
         </div>
@@ -130,7 +119,7 @@ export default function FrameworkHeader() {
               title="cart"
               className="iconfont icon-shopping-cart-fill text-[24px] text-[#666666] hover:text-[#c32200]"
             ></span>
-            <div className="total absolute top-[3px] right-[-8px] w-[16px] h-[16px] rounded-full bg-[#c32200] leading-[16px] text-center text-[#ffffff] text-[12px]">
+            <div className="total absolute top-[3px] right-[-10px] w-[16px] h-[16px] rounded-full bg-[#c32200] leading-[16px] text-center text-[#ffffff] text-[12px]">
               8
             </div>
           </div>

@@ -19,7 +19,7 @@ const HomeMethodOfPayment: React.FC = () => {
           {name: "Pay4", src: Pay4},
         ].map((item) => {
           return (
-            <li key={item.name}>
+            <li key={item.name} className="opacity-[0.85] hover:opacity-[1] cursor-pointer">
               <Image src={item.src} width={120} quality={100} alt={item.name} />
             </li>
           );
