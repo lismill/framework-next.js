@@ -1,8 +1,11 @@
-import {Select, Trigger} from "@arco-design/web-react";
+import {Icon, Select, Trigger} from "@arco-design/web-react";
 const Option = Select.Option;
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/images/common/logo.png";
+const IconFont = Icon.addFromIconFontCn({
+  src: "https://at.alicdn.com/t/c/font_3987391_5r3uhrmo7qo.js?spm=a313x.7781069.1998910419.76&file=font_3987391_5r3uhrmo7qo.js",
+});
 
 export default function FrameworkHeader() {
   return (
@@ -43,24 +46,20 @@ export default function FrameworkHeader() {
                 )}
               >
                 <div className="flex items-center">
-                  <span className="iconfont icon-user1 ml-[22px] text-[20px]" title="login/register"></span>
+                  <span className="flex" title="login/register">
+                    <IconFont type="icon-user1" className="text-[20px]" />
+                  </span>
                   <span className="ml-[6px] text-[13px]">Sign in</span>
                 </div>
               </Trigger>
             </div>
-            <div className="flex items-center">
-              <span
-                className="iconfont icon-email ml-[22px] text-[14px] cursor-pointer relative top-[1px]"
-                title="login/register"
-              ></span>
+            <div className="ml-[22px] flex items-center cursor-pointer hover:text-[#ffffff]">
+              <IconFont type="icon-email" className="text-[20px]" />
             </div>
-            <div className="flex items-center">
-              <span
-                className="iconfont icon-discoard ml-[22px] text-[17px] cursor-pointer"
-                title="login/register"
-              ></span>
+            <div className="ml-[22px] flex items-center cursor-pointer hover:text-[#ffffff]">
+              <IconFont type="icon-discoard" className="text-[22px]" />
             </div>
-            <div className="ml-[32px]">
+            <div className="ml-[16px]">
               <Select trigger="hover" bordered={false} defaultValue="1" style={{width: "76px"}}>
                 <Option value="1">USD</Option>
                 <Option value="2">EUR</Option>
@@ -115,11 +114,10 @@ export default function FrameworkHeader() {
           </ul>
           {/* cart */}
           <div className="cart mr-[12px] relative cursor-pointer">
-            <span
-              title="cart"
-              className="iconfont icon-shopping-cart-fill text-[24px] text-[#666666] hover:text-[#c32200]"
-            ></span>
-            <div className="total absolute top-[3px] right-[-10px] w-[16px] h-[16px] rounded-full bg-[#c32200] leading-[16px] text-center text-[#ffffff] text-[12px]">
+            <span className="flex">
+              <IconFont type="icon-shopping-cart-fill" className="text-[24px] text-[#666666] hover:text-[#c32200]" />
+            </span>
+            <div className="total absolute top-[-4px] right-[-10px] w-[16px] h-[16px] rounded-full bg-[#c32200] leading-[16px] text-center text-[#ffffff] text-[12px]">
               8
             </div>
           </div>

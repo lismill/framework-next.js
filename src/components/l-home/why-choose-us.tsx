@@ -1,5 +1,8 @@
-import {Space} from "@arco-design/web-react";
+import {Icon, Space} from "@arco-design/web-react";
 import React from "react";
+const IconFont = Icon.addFromIconFontCn({
+  src: "https://at.alicdn.com/t/c/font_3987391_5r3uhrmo7qo.js?spm=a313x.7781069.1998910419.76&file=font_3987391_5r3uhrmo7qo.js",
+});
 
 const HomeWhyChooseUs: React.FC = () => {
   return (
@@ -32,9 +35,12 @@ const HomeWhyChooseUs: React.FC = () => {
             },
           ].map((item) => {
             return (
-              <dl key={item.name} className="mt-[12px] mb-[24px] w-[580px] flex items-center">
+              <dl
+                key={item.name}
+                className="h-[108px] mt-[12px] mb-[24px] w-[580px] flex items-center hover:opacity-[.85]"
+              >
                 <dt className="mr-[32px]">
-                  <span className={`text-[62px] text-[#c32200] iconfont ${item.icon}`}></span>
+                  <IconFont type={item.icon} className="text-[62px] text-[#c32200]"></IconFont>
                 </dt>
                 <dd>
                   <p className="name text-[24px]">{item.name}</p>
